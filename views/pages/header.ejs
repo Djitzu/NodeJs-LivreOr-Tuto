@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Ma premiere vue ejs</title>
+	<link rel="stylesheet" type="text/css" href="/assets/semantic/semantic.min.css">
+</head>
+
+<body>
+	<header class="ui fixed inverted menu">
+		<a href="/" class="header item">Accueil</a>
+
+	</header>
+	<div class="ui main container" style="padding-top: 50px">
+
+		<% if(locals.flash && locals.flash.error) { %>
+		<div class="ui negative message">
+			<%= flash .error%>
+		</div>
+		<% } %>
+
+		<% if(locals.flash && locals.flash.succes) { %>
+		<div class="ui positive message">
+			<%= flash .succes%>
+		</div>
+		<% } %>
+
+		<h1>Grave !</h1>
+
+		
